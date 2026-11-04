@@ -20,7 +20,7 @@ curar():void {
 }
 
 
-perder_vida(dano:number): void {
+    perder_vida(dano:number): void {
     this.vida -= dano
 
     if (this.vida < 0) {
@@ -28,7 +28,7 @@ perder_vida(dano:number): void {
         }
     }
 
-curar_outro_Animatronico(bichinhoB:Animatronicos):void {
+    curar_outro_Animatronico(bichinhoB:Animatronicos):void {
         bichinhoB.vida += 10
         if (bichinhoB.vida > 80){
         bichinhoB.vida = 80
