@@ -1,9 +1,9 @@
 export class Navio {
     [x: string]: any
-    public nome: string
+    protected nome: string
     protected vida: number
     protected capacidade_tripulatoria: number
-    public velocidade: number
+    protected velocidade: number
     protected canhoes: number
 
     constructor(nome: string, durabilidade: number, tripulacao: number, vrom: number, caboom: number) {
@@ -14,26 +14,28 @@ export class Navio {
         this.canhoes = caboom
     }
 
-    navegar(): void {
+    navegar(): string {
 
         if (this.velocidade > this.velocidade) {
             this.velocidade = this.velocidade
         }
 
-        console.log(` Narrador: O navio ${this.nome} estah a velejar ao horizonte a uma velocidade de ${this.velocidade}!`)
+        return `Narrador: O navio ${this.nome} estah a velejar ao horizonte a uma velocidade de ${this.velocidade}!`
     }
 
-    atacar(): void {
-        console.log(` Narrador: O navio ${this.nome} estah atacando outro navio com seus ${this.canhoes} canhoes!`)
+    atacar(): string {
+        return `Narrador: O navio ${this.nome} estah atacando outro navio com seus ${this.canhoes} canhoes!`
     }
 
-    receberDano(dano: number): void {
+    receberDano(dano: number): string {
         this.vida -= dano
+        // Math éuma biblioteca do javascript que contém métodos para fazermos cálculos matemáticos
+        let dano_positivo:number = Math.abs(dano)
 
         if (this.vida < 0) {
             this.vida = 0
         }
-        console.log(` Narrador: Nosso navio ${this.nome} foi atacado e perdeu ${dano} em sua dura carapasa!`)
+        return `Narrador: Nosso navio ${this.nome} foi atacado e perdeu ${dano} em sua dura carapasa!`
     }
 
     exibirInformacoes(): string {

@@ -18,17 +18,19 @@ class Navio {
         if (this.velocidade > this.velocidade) {
             this.velocidade = this.velocidade;
         }
-        console.log(` Narrador: O navio ${this.nome} estah a velejar ao horizonte a uma velocidade de ${this.velocidade}!`);
+        return `Narrador: O navio ${this.nome} estah a velejar ao horizonte a uma velocidade de ${this.velocidade}!`;
     }
     atacar() {
-        console.log(` Narrador: O navio ${this.nome} estah atacando outro navio com seus ${this.canhoes} canhoes!`);
+        return `Narrador: O navio ${this.nome} estah atacando outro navio com seus ${this.canhoes} canhoes!`;
     }
     receberDano(dano) {
         this.vida -= dano;
+        // Math éuma biblioteca do javascript que contém métodos para fazermos cálculos matemáticos
+        let dano_positivo = Math.abs(dano);
         if (this.vida < 0) {
             this.vida = 0;
         }
-        console.log(` Narrador: Nosso navio ${this.nome} foi atacado e perdeu ${dano} em sua dura carapasa!`);
+        return `Narrador: Nosso navio ${this.nome} foi atacado e perdeu ${dano} em sua dura carapasa!`;
     }
     exibirInformacoes() {
         return ` 

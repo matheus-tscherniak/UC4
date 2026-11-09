@@ -9,26 +9,25 @@ const naviarada: Navio[] = [
     new Galeoa("Simba", 1000, 50, 14.8, 80)
 ]
 
-naviarada.forEach(func => {
-console.log(`
-${func.atacar}`)
+naviarada.forEach((Navio) => {
+    console.log((Navio.exibirInformacoes))
+    console.log((Navio.atacar))
+    console.log((Navio.navegar))
+    console.log((Navio.receberDano))
+    console.log((Navio.exibirInformacoes))
 })
 
-naviarada.forEach(func => {
+naviarada.forEach((Navio) => {
 console.log(`
-${func.navegar}`)
-})
-
-naviarada.forEach(func => {
-console.log(`
-${func.receberDano(80)}`)
+${(Navio).receberDano(80)}`)
 })
 
 naviarada[2].reparar_navio()
 
-naviarada.forEach(func => {
-console.log(`
-${func.exibirInformacoes()}`)
+naviarada[1].explorando_ilha()
+
+naviarada.forEach((Navio) => {
+    console.log((Navio.exibirInformacoes))
 })
 
-naviarada[1].explorando_ilha()
+// so utilizar console.log quando for num lugar como esse mas nos outros é return

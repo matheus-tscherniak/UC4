@@ -1,0 +1,18 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const Desenouravedor_1 = require("./Desenouravedor");
+const Gergelinte_1 = require("./Gergelinte");
+const Lider_tecnico_1 = require("./Lider-tecnico");
+const progarvore = new Desenouravedor_1.Desenouravedor("Jalajames", "Desenvolvedor");
+const gergesol = new Gergelinte_1.Gergelinte("Solonildo", "Gerente");
+const lediergenico = new Lider_tecnico_1.Liderecnico("Germinicolison", "Lider tecnico");
+console.log("--- DESENVOLVEDOR ---");
+progarvore.programar();
+progarvore.trabalhar();
+console.log("\n--- GERENTE ---");
+gergesol.gerenciar();
+gergesol.trabalhar();
+console.log("\n--- LIDER TECNICO ---");
+lediergenico.gerenciar();
+lediergenico.programar();
+lediergenico.trabalhar();
